@@ -37,7 +37,6 @@ namespace Aircraft.Controllers
                 _signInManager = value; 
             }
         }
-
         public ApplicationUserManager UserManager
         {
             get
