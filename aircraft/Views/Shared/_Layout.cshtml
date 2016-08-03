@@ -40,7 +40,9 @@
     @{ Html.RenderPartial("_Aside"); }
     <div id="main" role="main">
         @{ Html.RenderPartial("_Ribbon"); }
-        @RenderBody()
+        <div class="">
+            @RenderBody()
+        </div>
     </div>
     @if (Request.IsAuthenticated)
     {

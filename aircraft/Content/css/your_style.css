@@ -17,3 +17,7 @@
  * - BODY
  * - CUSTOM STYLES
  */
+aside#left-panel {
+    margin-right:13px;
+
+}
