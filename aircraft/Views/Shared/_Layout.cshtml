@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en-us" id="@ViewBag.PageId" >
 <head>
-    <meta charset=" utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <title> SmartAdmin - MVC5 - SeedProject </title>
@@ -48,6 +48,7 @@
     {
         Html.RenderPartial("_Footer");
         Html.RenderPartial("_Tiles");
+        Html.RenderPartial("_Aside");
     }
     @{ Html.RenderPartial("_Scripts", RenderSection("pagespecific", false)); }
 </body>

@@ -8,7 +8,8 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+   @Html.ActionLink("Create New", "Create")   
+   
 </p>
 <table class="table">
     <tr>
@@ -26,9 +27,14 @@
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.AerolineaID }) |
             @Html.ActionLink("Details", "Details", new { id=item.AerolineaID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.AerolineaID })
+            @Html.ActionLink("Disable", "Delete", new { id=item.AerolineaID })
         </td>
     </tr>
 }
 
 </table>
+<p2>
+    <h2> @Html.ActionLink("TODAY FLIGHTS", "Index", "Vuelos")</h2>
+  
+      
+</p2>
