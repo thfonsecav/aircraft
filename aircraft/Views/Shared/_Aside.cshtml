@@ -20,6 +20,11 @@
         <ul>
             <li class="active">
                 <a href="@Url.Action("index", "home")" title="Dashboard"><i class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">Dashboard</span></a>
+                <a @Html.ActionLink("Airport", "Index", "Aeropuertos") title="Aeropuertos"><i class="fa fa-lg fa-fw fa-Aeropuertos"></i> <span class="menu-item-parent">Dashboard</span></a>
+                <a @Html.ActionLink("Airlines", "Index", "Aerolineas") title="Aerolineas"><i class="fa fa-lg fa-fw fa-Aerolineas"></i> <span class="menu-item-parent">Dashboard</span></a>
+                <a @Html.ActionLink("Country", "Index", "Paises") title="Aerolineas"><i class="fa fa-lg fa-fw fa-Aerolineas"></i> <span class="menu-item-parent">Dashboard</span></a>
+                
+               
             </li>
         </ul>
     </nav>
