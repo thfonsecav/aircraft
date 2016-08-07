@@ -9,6 +9,8 @@ namespace Aircraft.Models
     public class Puesto
     {
         public int PuestoID { get; set; }
+        public string Posicion { get; set; }
+        public bool Ventana { get; set; }
         public Boolean estado { get; set; } //true ocupado false disponible
         public virtual Vuelo VueloId { get; set; }
         public virtual Usuario UsuarioId { get; set; }
