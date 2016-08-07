@@ -9,7 +9,7 @@ namespace Aircraft
         public static void RegisterBundles(BundleCollection bundles)
         {
 
-            bundles.Add(new StyleBundle("~/content/smartadmin").IncludeDirectory("~/content/css", "*.min.css"));
+            bundles.Add(new StyleBundle("~/content/smartadmin").IncludeDirectory("~/content/css", "*.css"));
 
             bundles.Add(new ScriptBundle("~/scripts/smartadmin").Include(
                                         "~/scripts/app.config.seed.min.js",
