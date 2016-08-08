@@ -43,23 +43,23 @@ namespace Aircraft.DA
 
         }
     }
-    /*
-    public class UserInit : DropCreateDatabaseIfModelChanges<ApplicationDbContext>
-    {
-        protected async override void Seed(ApplicationDbContext context)
-        {
-            context.Roles.Add(new Microsoft.AspNet.Identity.EntityFramework.IdentityRole()
-            {
-                Name = "Administrator"
-            });
-            var PasswordHas = new PasswordHasher();
-            var UserManager = new UserManager<User>(new UserStore<User>(context));
-            var user = new User { UserName = "admin@admin.com", Email = "admin@admin.com"};
-            var result = await UserManager.CreateAsync(user, PasswordHas.HashPassword("P@ssword123"));
-            UserManager.Create(user);
-            UserManager.AddToRole(user.Id, "Administrator");
-        }
-    }
-    */
+ 
+    //public class UserInit : DropCreateDatabaseIfModelChanges<ApplicationDbContext>
+    //{
+    //    protected async override void Seed(ApplicationDbContext context)
+    //    {
+    //        context.Roles.Add(new Microsoft.AspNet.Identity.EntityFramework.IdentityRole()
+    //        {
+    //            Name = "Administrator"
+    //        });
+    //        var PasswordHas = new PasswordHasher();
+    //        var UserManager = new UserManager<User>(new UserStore<User>(context));
+    //        var user = new User { UserName = "admin@admin.com", Email = "admin@admin.com"};
+    //        var result = await UserManager.CreateAsync(user, PasswordHas.HashPassword("P@ssword123"));
+    //        UserManager.Create(user);
+    //        UserManager.AddToRole(user.Id, "Administrator");
+    //    }
+    //}
+    
 
 }
