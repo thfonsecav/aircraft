@@ -398,6 +398,7 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\app.config.seed.min.js.map" />
     <Content Include="Scripts\app.seed.min.js.map" />
+    <Content Include="Views\Shared\Promotion.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
