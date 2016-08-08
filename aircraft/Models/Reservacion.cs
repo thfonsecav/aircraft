@@ -11,6 +11,6 @@ namespace Aircraft.Models
         public string ReservacionID { get; set; }
 
         public virtual Vuelo VueloId { get; set; }
-        public virtual Usuario UsuarioId { get; set; }
+        public virtual User UsuarioId { get; set; }
     }
 }

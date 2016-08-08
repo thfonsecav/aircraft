@@ -8,6 +8,8 @@ using System.Web;
 using System.Web.Mvc;
 using Aircraft.DA;
 using Aircraft.Models;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Aircraft.Controllers
 {

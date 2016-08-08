@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+
 
 namespace Aircraft.Models
 {
@@ -12,7 +12,7 @@ namespace Aircraft.Models
         public string Nombre { get; set; }
 
 
-        public virtual ICollection<Usuario> Usuarios { get; set; }
+        public virtual ICollection<User> Usuarios { get; set; }
         public virtual ICollection<Avion> Aviones { get; set; }
     }
 }

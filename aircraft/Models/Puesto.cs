@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Web;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Aircraft.Models
 {
@@ -11,6 +9,6 @@ namespace Aircraft.Models
         public int PuestoID { get; set; }
         public Boolean estado { get; set; } //true ocupado false disponible
         public virtual Vuelo VueloId { get; set; }
-        public virtual Usuario UsuarioId { get; set; }
+        public virtual User UsuarioId { get; set; }
     }
 }
