@@ -11,6 +11,7 @@ using Aircraft.Models;
 
 namespace Aircraft.Controllers
 {
+    [Authorize(Roles = "Administrator")]
     public class AvionesController : Controller
     {
         private AircraftContext db = new AircraftContext();

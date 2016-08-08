@@ -13,6 +13,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Aircraft.Controllers
 {
+    [Authorize(Roles = "Administrator")]
     public class AerolineasController : Controller
     {
         private AircraftContext db = new AircraftContext();

@@ -9,7 +9,7 @@ namespace Aircraft.Models
 {
     public class Pais
     {
-        public int PaisID { get; set; }
+        public int PaisId { get; set; }
         public string Nombre { get; set; }
         public virtual ICollection<Aeropuerto> Aereopuerto { get; set; }
 
