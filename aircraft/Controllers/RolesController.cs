@@ -9,11 +9,11 @@ namespace Aircraft.Controllers
     //[Authorize(Roles ="Administrator")]
     public class RolesController : Controller
     {
-        ApplicationDbContext context;
+        AircraftContext context;
 
         public RolesController()
         {
-            context = new ApplicationDbContext();
+            context = new AircraftContext();
         }
 
 
