@@ -11,7 +11,7 @@ namespace Aircraft.Models
         public int AeropuertoID { get; set; }
         public string Nombre { get; set; }
 
-        public virtual Pais PaisCodigo { get; set; }
+        public virtual Pais PaisId { get; set; }
         public virtual ICollection<Vuelo> Vuelos { get; set; }
         public virtual ICollection<Aerolinea> Aerolineas { get; set; }
 

@@ -10,32 +10,46 @@ namespace Aircraft.DA
     {
         protected override void Seed(AircraftContext context)
         {
-            var Pais1 = new Pais { PaisID = 001, Nombre = "Costa Rica" };
-            var Pais2 = new Pais { PaisID = 002, Nombre = "Nicaragua" };
-            var Pais3 = new Pais { PaisID = 003, Nombre = "Panama" };
-            var Pais4 = new Pais { PaisID = 004, Nombre = "Colombia" };
-            var Pais5 = new Pais { PaisID = 005, Nombre = "Mexico" };
 
             var paises = new List<Pais>
             {
-                 new Pais { PaisID = 006, Nombre = "Venezuela"},
-                 new Pais { PaisID = 007, Nombre = "Peru"},
-                 new Pais { PaisID = 008, Nombre = "Bolivia"},
+                 new Pais { PaisId = 001, Nombre = "Costa Rica" },
+                 new Pais { PaisId = 002, Nombre = "Nicaragua" },
+                 new Pais { PaisId = 003, Nombre = "Panama" },
+                 new Pais { PaisId = 004, Nombre = "Colombia" },
+                 new Pais { PaisId = 005, Nombre = "Mexico" },
+                 new Pais { PaisId = 006, Nombre = "Venezuela"},
+                 new Pais { PaisId = 007, Nombre = "Peru"},
+                 new Pais { PaisId = 008, Nombre = "Bolivia"}
 
             };
-            context.Pais.Add(Pais1);
-            context.Pais.Add(Pais2);
-            context.Pais.Add(Pais3);
-            context.Pais.Add(Pais4);
-            context.Pais.Add(Pais5);
             paises.ForEach(pais => context.Pais.Add(pais));
 
-            var aeropuertos = new List<Aeropuerto> {
-                new Aeropuerto { AeropuertoID = 01, Nombre = " Aeropuerto Internacional Juan Santa Maria", PaisCodigo=001},
-                new Aeropuerto { AeropuertoID = 02, Nombre = "Aeropuerto Internacional Daniel Oduber", PaisCodigo=001},
-                new Aeropuerto { AeropuertoID = 03, Nombre = "Aeropuerto Internacional de Limon", PaisCodigo=001},
-            };
-            aeropuertos.ForEach(Aeropuerto => context.Aeropuerto.Add(Aeropuerto));
+            context.Roles.Add(new Microsoft.AspNet.Identity.EntityFramework.IdentityRole()
+            {
+                Name = "Administrator"
+            });
+            context.Roles.Add(new Microsoft.AspNet.Identity.EntityFramework.IdentityRole()
+            {
+                Name = "Manager"
+            });
+            context.Roles.Add(new Microsoft.AspNet.Identity.EntityFramework.IdentityRole()
+            {
+                Name = "SaleAgent"
+            });
+
+            context.Roles.Add(new Microsoft.AspNet.Identity.EntityFramework.IdentityRole()
+            {
+                Name = "EndUser"
+            });
+            var PasswordHas = new PasswordHasher();
+            var UserManager = new UserManager<User>(new UserStore<User>(context));
+            var admin = new User { UserName = "admin@admin.com", Email = "admin@admin.com"};
+            var manager = new User { UserName = "manager@manager.com", Email = "manager@manager.com" };
+            UserManager.Create(admin, "P@ssword123");
+            UserManager.Create(manager, "P@ssword123");
+            UserManager.AddToRole(admin.Id, "Administrator");
+            UserManager.AddToRole(manager.Id, "Manager");
 
 
             

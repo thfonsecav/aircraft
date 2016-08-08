@@ -6,7 +6,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Aircraft.Controllers
 {
-    //[Authorize(Roles ="Administrator")]
+    [Authorize(Roles ="Administrator")]
     public class RolesController : Controller
     {
         AircraftContext context;
