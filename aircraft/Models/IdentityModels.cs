@@ -17,7 +17,9 @@ namespace Aircraft.Models
             return userIdentity;
         }
     }
+}
 
+    /*
     public class ApplicationDbContext : IdentityDbContext<User>
     {
         public ApplicationDbContext()
@@ -30,4 +32,4 @@ namespace Aircraft.Models
             return new ApplicationDbContext();
         }
     }
-}
+}*/

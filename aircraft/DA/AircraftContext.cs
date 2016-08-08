@@ -1,11 +1,16 @@
 ﻿using Aircraft.Models;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using System.Security.Claims;
+using System.Threading.Tasks;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+
 
 
 namespace Aircraft.DA
 {
-    public class AircraftContext : DbContext
+    public class AircraftContext : IdentityDbContext<User>
     {
 
         public AircraftContext() : base("Aircraft")
@@ -25,6 +30,11 @@ namespace Aircraft.DA
         {
             //Previene que la tabla de la base de datos sea pluralizada. Ej: (Persona => Personas)
             //modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            base.OnModelCreating(modelBuilder);
+        }
+        public static AircraftContext Create()
+        {
+            return new AircraftContext();
         }
     }
 }
