@@ -17,7 +17,9 @@
  * - BODY
  * - CUSTOM STYLES
  */
-aside#left-panel {
-    margin-right:13px;
+.renderBody {
 
+    margin-left:40px;
 }
+
+

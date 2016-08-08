@@ -13,7 +13,8 @@ namespace Aircraft.Models
         public string HoraSalida { get; set; }
         public string HoraLlegada { get; set; }
         public string Destino { get; set; }
-        public string Fecha { get; set; }
+        public string FechaLlegada { get; set; }
+        public string FechaSalida { get; set; }
         public virtual Avion AvionID { get; set; }
         public virtual Vuelo Estado{ set; get; }
         public virtual ICollection<Reservacion> Reservaciones { get; set; }

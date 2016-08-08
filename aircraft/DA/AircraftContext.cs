@@ -19,8 +19,6 @@ namespace Aircraft.DA
         public DbSet<Pais> Pais { get; set; }
         public DbSet<Puesto> puesto { get; set; }
         public DbSet<Reservacion> Reservacion { get; set; }
-        public DbSet<Roles> Roles { get; set; }
-        public DbSet<Usuario> Usuario { get; set; }
         public DbSet<Vuelo> Vuelo { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

@@ -19,12 +19,16 @@
 
         <ul>
             <li class="active">
-                <a href="@Url.Action("index", "home")" title="Dashboard"><i class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">Dashboard</span></a>
-                <a @Html.ActionLink("Airport", "Index", "Aeropuertos") title="Aeropuertos"><i class="fa fa-lg fa-fw fa-Aeropuertos"></i> <span class="menu-item-parent">Dashboard</span></a>
-                <a @Html.ActionLink("Airlines", "Index", "Aerolineas") title="Aerolineas"><i class="fa fa-lg fa-fw fa-Aerolineas"></i> <span class="menu-item-parent">Dashboard</span></a>
-                <a @Html.ActionLink("Country", "Index", "Paises") title="Aerolineas"><i class="fa fa-lg fa-fw fa-Aerolineas"></i> <span class="menu-item-parent">Dashboard</span></a>
-                
-               
+                <a href="@Url.Action("Index", "Home")" title="Dashboard"><i class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">Dashboard</span></a>
+            </li>
+            <li>
+                <a href="@Url.Action( "Index", "Aeropuertos")"  title="Aeropuertos"><i class="fa fa-lg fa-fw fa-building"></i> <span class="menu-item-parent">Aeropuertos</span></a>
+            </li>
+            <li>
+                <a href="@Url.Action("Index", "Aerolineas")" title="Aerolineas"><i class="fa fa-lg fa-fw fa-plane"></i> <span class="menu-item-parent">Aerolineas</span></a>
+            </li>
+            <li>
+                <a href="@Url.Action( "Index", "Paises")" title="Aerolineas"><i class="fa fa-lg fa-fw fa-flag"></i> <span class="menu-item-parent">Paises</span></a>
             </li>
         </ul>
     </nav>

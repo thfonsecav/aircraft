@@ -1,9 +1,8 @@
 ﻿using Aircraft.Models;
-using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Web;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Aircraft.DA
 {
@@ -39,9 +38,28 @@ namespace Aircraft.DA
             aeropuertos.ForEach(Aeropuerto => context.Aeropuerto.Add(Aeropuerto));
 
 
-
+            
             context.SaveChanges();
+
         }
     }
+    /*
+    public class UserInit : DropCreateDatabaseIfModelChanges<ApplicationDbContext>
+    {
+        protected async override void Seed(ApplicationDbContext context)
+        {
+            context.Roles.Add(new Microsoft.AspNet.Identity.EntityFramework.IdentityRole()
+            {
+                Name = "Administrator"
+            });
+            var PasswordHas = new PasswordHasher();
+            var UserManager = new UserManager<User>(new UserStore<User>(context));
+            var user = new User { UserName = "admin@admin.com", Email = "admin@admin.com"};
+            var result = await UserManager.CreateAsync(user, PasswordHas.HashPassword("P@ssword123"));
+            UserManager.Create(user);
+            UserManager.AddToRole(user.Id, "Administrator");
+        }
+    }
+    */
 
 }
